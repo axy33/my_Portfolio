@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Akshay Muley | DevOps & Software Engineer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+        }
+
+        /* ===== NAVBAR ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #00f5a0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        nav ul li a::after {
+            content: "";
+            width: 0;
+            height: 2px;
+            background: #00f5a0;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        header h1 {
+            font-size: 60px;
+            background: linear-gradient(45deg, #00f5a0, #00d9f5);
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: slideDown 1.5s ease-in-out;
+        }
+
+        header h2 {
+            margin-top: 15px;
+            font-weight: 300;
+            color: #ddd;
+            animation: slideUp 1.5s ease-in-out;
+        }
+
+        section {
+            padding: 100px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            width: 80px;
+            height: 3px;
+            background: #00f5a0;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: 0.4s;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: rgba(0, 245, 160, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0,0,0,0.4);
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @media(max-width:768px){
+            nav ul{
+                gap: 15px;
+                font-size: 12px;
+            }
+            header h1{
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav>
+    <div class="logo">Akshay Muley</div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- ===== HOME ===== -->
+<header id="home">
+    <h1>Akshay Muley</h1>
+    <h2>DevOps Engineer | Software Engineer | Cloud Enthusiast</h2>
+</header>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p style="text-align:center; max-width:800px; margin:auto; color:#ccc;">
+        Passionate DevOps & Software Engineer with experience in building secure,
+        scalable web applications and automating cloud infrastructure.
+        Strong expertise in AWS, CI/CD pipelines, Docker, Kubernetes,
+        and Spring Boot development.
+    </p>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services">
+    <h2 class="section-title">Services</h2>
+    <div class="card-container">
+        <div class="card">
+            <h3>Cloud Deployment</h3>
+            <p>Deploying scalable applications on AWS with high availability.</p>
+        </div>
+        <div class="card">
+            <h3>CI/CD Automation</h3>
+            <p>Building automated pipelines using Jenkins & GitHub Actions.</p>
+        </div>
+        <div class="card">
+            <h3>Web Application Development</h3>
+            <p>Developing secure full-stack apps using Spring Boot & React.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="card-container">
+        <div class="card">AWS, Docker, Kubernetes</div>
+        <div class="card">Java, Spring Boot</div>
+        <div class="card">React.js, JavaScript</div>
+        <div class="card">MySQL, MongoDB</div>
+    </div>
+</section>
+
+<!-- ===== WORK ===== -->
+<section id="work">
+    <h2 class="section-title">Work</h2>
+    <div class="card">
+        <h3>TranSafely Project</h3>
+        <p>Fintech application with JWT authentication, real-time transactions,
+           WebSocket integration, and secure cloud deployment.</p>
+    </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <p style="text-align:center;">MoNo: 9834590376</p>
+    <p style="text-align:center;">Email: akshaymuley35@gmailcom</p>
+</section>
+
+<footer>
+    © 2026 Akshay Muley | DevOps & Software Engineer
+</footer>
+
+</body>
+</html>
